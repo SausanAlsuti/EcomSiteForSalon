@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="/assets/style/style.css">
+</head>
+<div id="header"></div>
+<body>
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <main class="main-content container">
+            <form action="submit_booking.php" method="POST">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required />
+
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Haircut">Haircut</option>
+                <option value="Facial">Facial</option>
+                <option value="Manicure">Manicure & Pedicure</option>
+                <option value="Makeup">Makeup</option>
+                <option value="Massage">Massage</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required />
+
+            <button type="submit">Book Now</button>
+            </form>
+        </main>
+    </div>
+    <div id="footer"></div>
+    <script>
+        // Reusable layout loader
+        fetch('/layouts/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('/layouts/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

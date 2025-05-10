@@ -1,0 +1,39 @@
+.container {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff0f5; /* Just for demonstration */
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    width: 700%; /* Total slides */
+    animation: slide 9s infinite;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    14% { transform: translateX(-100%); }
+    28% { transform: translateX(-200%); }
+    42% { transform: translateX(-300%); }
+    57% { transform: translateX(-400%); }
+    71% { transform: translateX(-500%); }
+    85% { transform: translateX(-600%); }
+    100% { transform: translateX(0%); }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamsaty Saloon</title>
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
+    <link rel="stylesheet" href="/assets/style/style.css">
+</head>
+<div id="header"></div>
+<body>
+    <div class="container">
+        <h1>Welcome to Lamsaty Saloon</h1>
+    </div>
+    <p>Your one-stop destination for all your beauty needs.</p>
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="/assets/images/h4.avif" alt="Slide 1">
+                <img src="/assets/images/h2.avif" alt="Slide 2">
+                <img src="/assets/images/h3.avif" alt="Slide 3">
+                <img src="/assets/images/h4.avif" alt="Slide 4">
+                <img src="/assets/images/h2.avif" alt="Slide 5">
+                <img src="/assets/images/h3.avif" alt="Slide 6">
+                <img src="/assets/images/h4.avif" alt="Slide 7">
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-container">
+        <h2>Services Offered:</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="/assets/images/h3.avif" alt="Haircut Icon">
+                <h3>Haircuts</h3>
+                <p>Stylish cuts tailored to your look.</p>
+            </div>
+            <div class="service-card">
+                <img src="/assets/images/h2.avif" alt="Facials Icon">
+                <h3>Facials</h3>
+                <p>Rejuvenate your skin with our facials.</p>
+            </div>
+            <div class="service-card">
+                <img src="/assets/images/h3.avif" alt="Manicure & Pedicure Icon">
+                <h3>Manicures & Pedicures</h3>
+                <p>Perfectly groomed hands and feet.</p>
+            </div>
+            <div class="service-card">
+                <img src="/assets/images/h4.avif" alt="Makeup Icon">
+                <h3>Makeup Services</h3>
+                <p>Professional makeup for every occasion.</p>
+            </div>
+            <div class="service-card">
+                <img src="/assets/images/h2.avif" alt="Massage Therapy Icon">
+                <h3>Massage Therapy</h3>
+                <p>Relaxing massages to soothe your body.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <main>
+        <section class="gallery">
+            <h2>Our Work</h2>
+            <div class="gallery-grid">
+                <img src="/assets/images/h3.avif" alt="">
+                <img src="/assets/images/h2.avif" alt="">
+                <img src="/assets/images/h3.avif" alt="">
+                <img src="/assets/images/h4.avif" alt="">
+                <img src="/assets/images/h2.avif" alt="">
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        // Reusable layout loader
+        fetch('/layouts/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('/layouts/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    
+    <script>
+        let currentIndex = 0;
+        const images = document.getElementById('carouselImages');
+        const totalSlides = 3;
+
+        function showSlide(index) {
+            images.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Optional: Auto-slide every 3 seconds
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>

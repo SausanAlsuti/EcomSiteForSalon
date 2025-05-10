@@ -1,0 +1,37 @@
+nav{
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:hover{
+    background-color: #744a4a;
+}
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+nav li{
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a{
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    background-color: #744a4a;
+}
+nav ul li a.active{
+    background-color: #555;
+    color: white;
+}
+nav ul li a.active:hover{
+    background-color: #6a6a6a;
+    color: white;
+}

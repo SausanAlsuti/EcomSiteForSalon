@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/assets/style/style.css">
+</head>
+<div id="header"></div>
+<body>
+   <main class="main-content container">
+        <h1>About Lamsaty Saloon</h1>
+        <blockquote>
+        <p>
+            This project demonstrates how to create a simple website for a Lamsaty Saloon where users can book services and contact the salon directly via email. 
+            Using basic technologies like HTML, CSS, JavaScript, and PHP, we show how to handle service bookings and contact messages without using any external libraries or frameworks.
+        </p>
+
+        <p>
+            The project includes a basic service booking form where users can choose a service, enter their details, and submit their booking. The data is then sent via PHP's <code>mail()</code> function to the salon’s email address, ensuring that bookings are received in real-time.
+        </p>
+
+        <p>
+            In addition to service booking, there’s a simple contact form that allows users to send messages directly to the salon. This also uses the <code>mail()</code> function to send the user’s message via email.
+        </p>
+
+        <p>
+            This project is perfect for beginners who want to learn how to build a small, functional website from scratch with basic web technologies.
+        </p>
+
+
+        </blockquote>
+    </main>
+    <div id="footer"></div>
+    <script>
+        // Reusable layout loader
+        fetch('/layouts/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('/layouts/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

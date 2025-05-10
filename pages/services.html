@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our services</title>
+    <link rel="stylesheet" href="/assets/style/style.css">
+</head>
+<div id="header"></div>
+<body>
+    <div class="services-container">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="/assets/images/h2.avif" alt="Haircut" />
+                <h3>Haircuts</h3>
+                <p>Trendy and classic cuts for all hair types and styles.</p>
+            </div>
+
+             <div class="service-card">
+                <img src="/assets/images/h3.avif" alt="Facial" />
+                <h3>Facials</h3>
+                <p>Deep-cleansing facials that leave your skin glowing.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images//h4.avif" alt="Nails" />
+                <h3>Manicure & Pedicure</h3>
+                <p>Clean, stylish nails and perfect relaxation.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images/h2.avif" alt="Makeup" />
+                <h3>Makeup</h3>
+                <p>Glam for any event or natural everyday beauty.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images//h3.avif" alt="Massage" />
+                <h3>Massage</h3>
+                <p>Relaxing full-body massages tailored to your needs.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images/h2.avif" alt="Haircut" />
+                <h3>Haircuts</h3>
+                <p>Trendy and classic cuts for all hair types and styles.</p>
+            </div>
+
+             <div class="service-card">
+                <img src="/assets/images/h3.avif" alt="Facial" />
+                <h3>Facials</h3>
+                <p>Deep-cleansing facials that leave your skin glowing.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images//h4.avif" alt="Nails" />
+                <h3>Manicure & Pedicure</h3>
+                <p>Clean, stylish nails and perfect relaxation.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images/h2.avif" alt="Makeup" />
+                <h3>Makeup</h3>
+                <p>Glam for any event or natural everyday beauty.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="/assets/images//h3.avif" alt="Massage" />
+                <h3>Massage</h3>
+                <p>Relaxing full-body massages tailored to your needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+        // Reusable layout loader
+        fetch('/layouts/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+        fetch('/layouts/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
